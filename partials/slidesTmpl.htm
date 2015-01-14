@@ -1,0 +1,11 @@
+ <div class="each-slides" style="width: ${$item.width}px; height: ${$item.height}px;">
+  <!-- This part can be decorated as you like -->
+   <div class="slides-title"><h1>${title}</h1></div>
+   <div class="text" ${$item.fn.setStyle(text.style, $item)}>${text.body}</div>
+     {{if image}}
+      {{each image}}
+      <img src="${src}" ${$item.fn.setStyle(style, $item)} />
+      {{/each}} 
+     {{/if}}
+   <!-- End -->
+ </div>

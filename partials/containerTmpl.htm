@@ -1,0 +1,20 @@
+ <div class="main_container" id="slide-show" style="width: ${width}px; height: ${height}px;">
+  <div class="slides-nav-left">
+   <div class="slides-nav-outer" style="height: ${height-50}px;">
+    {{each slides}}
+     <div class="slides-item" data-slide="${$index}">
+       <div>${$index + 1}: <b>${title}</b></div>
+       <div class="slides-shorts">${shorts}</div>
+     </div>
+    {{/each}}
+   </div>
+   <div class="slides-nav-utils">
+      <div class="drag"></div>
+   </div>
+    <div class="control-panel">
+      <div class="slide-show-prev"></div>
+      <div class="slide-show-play"></div>
+      <div class="slide-show-next"></div>
+    </div>
+  </div>
+ </div>
