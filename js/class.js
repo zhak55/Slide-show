@@ -1,6 +1,6 @@
 "use strict";
 
-define(function() {
+define(["common"], function( common ) {
   return function() {
     var _class = function() {
       this.initialize.apply( this, arguments );  
@@ -13,7 +13,7 @@ define(function() {
     _class.fn.initialize = function(){};
       
     _class.extend = function( obj ) {
-     if( typeof obj !== "object" ) throw new Error("Must be an object");
+     if( !common.expect( obj, "object" ) ) throw new Error("Must be an object");
       var key;
        for( key in obj ) _class.fn[key] = obj[key];
        return this;
